@@ -8,6 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     id: 1,
+    category: 'Video Production',
+    status: 'Completed',
     title: 'AI Video Editing',
     description: 'High-retention short-form videos and YouTube content created with advanced AI tools, Premiere Pro, and After Effects.',
     image: '/images/projects/video-editing.jpg',
@@ -15,6 +17,8 @@ const projects = [
   },
   {
     id: 2,
+    category: 'Web Development',
+    status: 'Live',
     title: 'Portfolio Website',
     description: 'A premium, fully custom personal portfolio with cinematic interactions, GSAP animations, and glassmorphism UI.',
     image: '/images/projects/portfolio-website.jpg',
@@ -22,6 +26,8 @@ const projects = [
   },
   {
     id: 3,
+    category: 'Web Design',
+    status: 'In Progress',
     title: 'Business Website',
     description: 'A high-converting, modern business landing page engineered to turn traffic into leads with a clean, luxury aesthetic.',
     image: '/images/projects/business-website.jpg',
@@ -62,7 +68,7 @@ const Projects = () => {
             <h2 className="text-4xl md:text-6xl font-bold mb-4">Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Works</span></h2>
             <p className="text-gray-400 text-lg max-w-xl">A selection of my recent projects focusing on UI/UX, performance, and modern web technologies.</p>
           </div>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-white hover:text-primary transition-colors pb-2 border-b border-white/20 hover:border-primary">
+          <a href="https://github.com/mbilaashraf003-hash" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-white hover:text-primary transition-colors pb-2 border-b border-white/20 hover:border-primary">
             View full archive <ExternalLink size={16} />
           </a>
         </div>
@@ -83,23 +89,32 @@ const Projects = () => {
               </div>
               
               <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-primary font-bold tracking-widest text-sm uppercase border-l-2 border-primary pl-3">{project.category}</span>
+                  <div className="flex items-center px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-semibold text-gray-300 backdrop-blur-sm shadow-xl">
+                    <span className={`w-1.5 h-1.5 rounded-full inline-block mr-2 ${project.status === 'Completed' ? 'bg-green-500' : project.status === 'Live' ? 'bg-blue-500 animate-pulse' : 'bg-primary animate-pulse'}`}></span>
+                    {project.status}
+                  </div>
+                </div>
+
+                <h3 className="text-3xl md:text-5xl font-bold mb-6 font-display">{project.title}</h3>
+                
                 <div className="flex gap-3 mb-6 flex-wrap">
                   {project.tags.map(tag => (
-                    <span key={tag} className="px-4 py-1.5 text-xs font-semibold rounded-full border border-white/10 bg-white/5 text-gray-300">
+                    <span key={tag} className="px-4 py-1.5 text-xs font-semibold rounded-full border border-white/10 bg-white/[0.02] text-gray-400 hover:text-white hover:border-white/30 transition-colors cursor-default">
                       {tag}
                     </span>
                   ))}
                 </div>
                 
-                <h3 className="text-3xl md:text-4xl font-bold mb-6">{project.title}</h3>
-                <p className="text-gray-400 text-lg leading-relaxed mb-8">{project.description}</p>
+                <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-8">{project.description}</p>
                 
-                <div className="flex items-center gap-6">
-                  <a href="#" className="flex items-center gap-2 text-white hover:text-primary transition-colors font-medium">
-                    View Project <ExternalLink size={18} />
+                <div className="flex items-center gap-8">
+                  <a href="#" className="group flex items-center gap-2 text-white hover:text-primary transition-colors font-semibold tracking-wide">
+                    View Project <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </a>
-                  <a href="#" className="flex items-center gap-2 text-primary hover:text-white transition-colors font-medium">
-                    Case Study
+                  <a href="#" className="group flex items-center gap-2 text-gray-400 hover:text-white transition-colors font-medium">
+                    Case Study <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all">&rarr;</span>
                   </a>
                 </div>
               </div>
