@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, MapPin, Mail, Phone } from 'lucide-react';
+import SocialLinks from './SocialLinks';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -66,6 +67,11 @@ const Contact = () => {
                   <p className="text-lg font-medium">Pakistan</p>
                 </div>
               </div>
+            </div>
+            
+            <div className="mt-12">
+              <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">Connect With Me</h4>
+              <SocialLinks />
             </div>
           </div>
 
