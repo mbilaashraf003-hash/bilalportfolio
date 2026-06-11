@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import SocialLinks from './SocialLinks';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -88,10 +87,6 @@ const Hero = () => {
           >
             Let's Talk
           </a>
-        </div>
-        
-        <div className="hero-text">
-          <SocialLinks />
         </div>
       </div>
 
