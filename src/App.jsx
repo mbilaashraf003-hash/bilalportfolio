@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
 import Portfolio from './components/Portfolio';
 import Hero from './components/Hero';
+import Stats from './components/Stats';
 import Welcome from './components/Welcome';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -62,6 +63,7 @@ function App() {
       <main className="flex-grow w-full">
         <Portfolio />
         <Hero />
+        <Stats />
         <Welcome />
         <About />
         <Projects />

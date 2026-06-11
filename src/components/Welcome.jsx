@@ -34,13 +34,7 @@ const Welcome = () => {
         duration: 0.8,
         ease: 'power3.inOut'
       }, '-=0.8')
-      .from('.welcome-stat', {
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'power2.out'
-      }, '-=0.4')
+
       .from('.welcome-skill', {
         scale: 0.8,
         opacity: 0,
@@ -84,20 +78,7 @@ const Welcome = () => {
           </h2>
         </div>
         
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          {[
-            { value: '50+', label: 'Videos Edited' },
-            { value: '10+', label: 'Web Projects' },
-            { value: '100K+', label: 'Content Views' },
-            { value: '100%', label: 'Client Focus' },
-          ].map((stat, i) => (
-            <div key={i} className="welcome-stat p-6 rounded-2xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-md text-center hover:border-primary/30 transition-colors group shadow-xl">
-              <h4 className="text-4xl md:text-5xl font-bold text-primary mb-2 font-display group-hover:scale-110 transition-transform">{stat.value}</h4>
-              <p className="text-gray-400 font-medium uppercase tracking-wider text-sm">{stat.label}</p>
-            </div>
-          ))}
-        </div>
+
 
         {/* Skills Section */}
         <div className="flex flex-wrap gap-3 mb-16">
