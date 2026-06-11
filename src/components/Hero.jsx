@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import SocialLinks from './SocialLinks';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -66,7 +67,7 @@ const Hero = () => {
           I help brands, creators and businesses grow through AI-powered video editing, short-form content, cinematic visuals and modern responsive websites.
         </p>
 
-        <div className="hero-text flex flex-col sm:flex-row gap-5 items-center justify-center w-full mb-10">
+        <div className="hero-text flex flex-col sm:flex-row gap-6 items-center justify-center w-full mb-10">
           <a
             href="#projects"
             onClick={(e) => {
@@ -77,16 +78,7 @@ const Hero = () => {
           >
             View My Work
           </a>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="px-8 py-4 bg-white/5 border border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto backdrop-blur-sm"
-          >
-            Let's Talk
-          </a>
+          <SocialLinks className="gap-4" iconClassName="p-3.5 w-14 h-14" />
         </div>
       </div>
 
