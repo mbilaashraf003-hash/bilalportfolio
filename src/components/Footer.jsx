@@ -8,7 +8,11 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Bilal Ashraf. All rights reserved.
         </p>
         <div className="flex items-center gap-1 text-sm text-gray-400">
-          Designed & Built with <span className="text-primary mx-1">❤</span> by <span className="text-white font-medium ml-1">Bilal Ashraf</span>
+          Designed & Built with <span className="text-primary mx-1">❤</span> by 
+          <div className="flex items-center gap-2 ml-1">
+            <img src="/images/bilal.jpg" alt="Bilal Ashraf" className="w-6 h-6 rounded-full object-cover border border-white/20" />
+            <span className="text-white font-medium">Bilal Ashraf</span>
+          </div>
         </div>
       </div>
     </footer>
